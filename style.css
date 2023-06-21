@@ -88,7 +88,7 @@ a {
   width: 80px;
   padding: 5px 10px 5px 10px;
   margin-top: 5px;
-  margin-left: -220px;
+  /* margin-left: -220px; */
   border-radius: 10px;
   transition: transform 0.2s ease-in-out;
 }
@@ -279,6 +279,9 @@ a {
     display: flex;
     margin: -38px 0px 0px 20px;
   }
+  #reset{
+     margin-left: -270px;
+  }
 }
 @media screen and (max-width: 450px) {
   .control {
@@ -290,6 +293,9 @@ a {
     width: 120px;
     margin-bottom: 30px;
   }
+  #reset{
+    margin-left: -220px;
+ }
   #music-btn {
     border: none;
     padding: 5px;
