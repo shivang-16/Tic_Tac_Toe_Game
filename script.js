@@ -39,6 +39,7 @@ const checkWin = () => {
         "Hurray!! " + `"${boxText[e[0]].innerText}"` + " Won";
       music.pause();
       setTimeout(() => {
+        overMusic.currentTime = 0;
         overMusic.play();
         // funnyMusic.play();
       }, 500);
@@ -99,6 +100,7 @@ Playagain.addEventListener("click", () => {
   overMusic.pause();
   // funnyMusic.pause();
   setTimeout(() => {
+    music.currentTime = 0;
     music.play();
   }, 500);
 });
