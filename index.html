@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <li>
+        <a href="index.html">
+          <h1>Tic <span id="tac">Tac</span> Toe Game</h1>
+        </a>
+      </li>
+      <button id="music-btn">Pause music</button>
+    </nav>
+    <section id="game">
+      <div class="control">
+        <h2>Welcome to Tic <span id="tac">Tac</span> Toe Game</h2>
+        <button id="reset">Reset</button>
+        <div id="image">
+          <img src="win.gif" />
+        </div>
+      </div>
+      <div class="block">
+        <div class="game-box bt bl"><span class="test"></span></div>
+        <div class="game-box bt"><span class="test"></span></div>
+        <div class="game-box bt br"><span class="test"></span></div>
+        <div class="game-box bl"><span class="test"></span></div>
+        <div class="game-box"><span class="test"></span></div>
+        <div class="game-box br"><span class="test"></span></div>
+        <div class="game-box bl bb"><span class="test"></span></div>
+        <div class="game-box bb"><span class="test"></span></div>
+        <div class="game-box br bb"><span class="test"></span></div>
+      </div>
+    </section>
+    <div class="popover-background">
+      <div class="popover">
+        <div class="popover-header">
+          <h2>The Ultimate Tic <span id="tac">Tac</span> Toe Game</h2>
+        </div>
+        <div class="popover-content">
+          <img src="logo.png" alt="" />
+          <button id="start">Play Now !</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="win-popover-background">
+      <div class="win-popover">
+        <div class="win-popover-content popover-content">
+          <h3 id="winner-message"></h3>
+          <img src="cheer.gif" />
+          <button id="play-again">Play Again!</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

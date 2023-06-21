@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+.navbar {
+  list-style: none;
+  position: absolute;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 18px rgb(0, 0, 0);
+}
+h1 {
+  padding-left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+#tac {
+  color: rgb(247, 39, 39);
+}
+#game {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+}
+.game-box {
+  border: 2px solid rgb(160, 22, 4);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game-box:hover {
+  background-color: rgb(251, 238, 238);
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 2px rgb(250, 138, 138);
+}
+.test {
+  font-size: 60px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+.control {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#image {
+  height: 200px;
+  width: 200px;
+  display: flex;
+}
+#image img {
+  width: 100%;
+}
+#reset {
+  background: none;
+  border: 2px solid rgb(160, 22, 4);
+  background-color: rgb(251, 228, 228);
+  width: 80px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 5px;
+  margin-left: -220px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+#reset:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 2px black;
+  cursor: pointer;
+}
+#music-btn {
+  position: absolute;
+  right: 10px;
+  padding: 10px;
+  border-radius: 50px;
+}
+#music-btn:hover {
+  background-color: rgb(247, 39, 39);
+  color: white;
+}
+.bt {
+  border-top: none;
+}
+.bb {
+  border-bottom: none;
+}
+.bl {
+  border-left: none;
+}
+.br {
+  border-right: none;
+}
+
+.popover-background {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popover-background::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+.popover {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0);
+  height: 330px;
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: zoomOut 0.5s;
+  transform-origin: center center;
+  top: 30%;
+  margin: auto;
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.popover-header {
+  box-shadow: 0px 0px 8px rgb(0, 0, 0);
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+.popover-content {
+  height: 100%;
+  margin: 0px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popover-content img {
+  height: 170px;
+  width: 310px;
+  margin: 10px 0px 0px 0px;
+  color: #7c7d7e;
+}
+.popover-content > button {
+  width: 110px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(199, 18, 15);
+  box-shadow: -0.1px 0.4px 0px 0.5px rgb(213, 213, 213);
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 18px;
+  cursor: pointer;
+  color: white;
+}
+.popover-content > button:hover {
+  background-color: rgb(255, 2, 2);
+}
+
+.win-popover-background {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.win-popover-background::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+.win-popover {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0);
+  height: 330px;
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 30%;
+  animation: zoomOut 0.5s;
+  transform-origin: center center;
+  margin: auto;
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.win-popover-content {
+  text-align: center;
+}
+.win-popover h3 {
+  color: black;
+  font-size: 24px;
+  margin: 20px 0;
+}
+.win-popover-content img {
+  height: 150px;
+  width: 180px;
+}
+
+@media screen and (max-width: 1050px) {
+  #game {
+    top: 220px;
+  }
+  .control {
+    padding-top: 40px;
+  }
+  .block {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+  }
+}
+@media screen and (max-width: 750px) {
+  #game {
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+  }
+  #image {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    margin: -38px 0px 0px 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .control {
+    padding-left: 10px;
+  }
+
+  #image {
+    height: 130px;
+    width: 120px;
+    margin-bottom: 30px;
+  }
+  #music-btn {
+    border: none;
+    padding: 5px;
+    width: 60px;
+    right: 7px;
+  }
+  .popover {
+    height: 310px;
+    width: 320px;
+  }
+  .popover-header {
+    font-size: 12px;
+  }
+  .win-popover {
+    height: 300px;
+    width: 320px;
+  }
+}
